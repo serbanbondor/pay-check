@@ -14,10 +14,14 @@ function App() {
     <GlobalProvider>
       <Header />
       <div className="container">
-        <Balance />
-        <IncomeExpenses />
-        <TransactionList />
-        <AddTransaction />
+        <div className="flex-child infos">
+          <Balance />
+          <IncomeExpenses />
+          <AddTransaction />
+        </div>
+        <div className="flex-child history">
+          <TransactionList />
+        </div>
       </div>
     </GlobalProvider>
   );
