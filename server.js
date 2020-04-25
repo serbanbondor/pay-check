@@ -3,11 +3,13 @@ const dotenv = require('dotenv');
 
 dotenv.config({ path: './config/config.env' });
 
+const transactions = require('./routes/transactions');
+
 const app = express();
 
-app.get('/', (req, res) => res.send('Hello World'));
+app.use('/api/v1/transactions', transactions);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 
 app.listen(
   PORT,
