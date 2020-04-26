@@ -15,6 +15,9 @@ const transactions = require('./routes/transactionsRoutes');
 // create our express app
 const app = express();
 
+// in order to user body parser
+app.use(express.json());
+
 // create the api and add the info from routes file
 app.use('/api/transactions', transactions);
 
