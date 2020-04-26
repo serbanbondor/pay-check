@@ -7,11 +7,8 @@ const transactions = require('./routes/transactionsRoutes');
 
 const app = express();
 
-app.use('/api/v1/transactions', transactions);
+app.use('/api/transactions', transactions);
 
 const PORT = process.env.PORT;
 
-app.listen(
-  PORT,
-  console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
-);
+app.listen(PORT, console.log(`Server running on port ${PORT}`));
