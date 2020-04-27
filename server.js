@@ -11,6 +11,7 @@ connectDB();
 
 // get the routes file
 const transactions = require('./routes/transactionsRoutes');
+const users = require('./routes/usersRoutes');
 
 // create our express app
 const app = express();
@@ -19,7 +20,7 @@ const app = express();
 app.use(express.json());
 
 // create the api and add the info from routes file
-app.use('/api/transactions', transactions);
+app.use('/api/', transactions, users);
 
 // get the port with dotenv using process.env
 const PORT = process.env.PORT;

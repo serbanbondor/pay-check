@@ -27,7 +27,7 @@ exports.getTransactions = async (req, res, next) => {
 // method that sends  info and is imported in routes
 exports.addTransaction = async (req, res, next) => {
   try {
-    const { text, amount } = req.body;
+    const { text, amount, userId } = req.body;
 
     const transaction = await Transactions.create(req.body);
 
