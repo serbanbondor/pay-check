@@ -9,6 +9,10 @@ const initialState = {
 // Create context
 export const GlobalContext = createContext(initialState);
 
+export let isLoggedIn = false;
+
+export let hasAccount = false;
+
 // Provider component
 export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);

@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
-:root {
-  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-
 * {
   box-sizing: border-box;
 }
@@ -33,6 +29,51 @@ body {
   text-transform: uppercase;
 }
 
+.login-register-container {
+  position: absolute;
+  background-color: #303030;
+  width: 820px;
+  height: 70vh;
+  border: none;
+  border-radius: 15px;
+  z-index: 999;
+}
+
+.login-description {
+  margin-bottom: 30px;
+  color: #fff;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.login-register-form {
+  margin: 0 auto;
+  width: 340px;
+}
+
+.register-hint {
+  margin-top: 40px;
+  color: #fff;
+  font-size: 19px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.register-description {
+  margin-bottom: 30px;
+  color: #fff;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.link {
+  cursor: pointer;
+  margin: 30px auto;
+  width: 200px;
+}
+
 .container {
   display: flex;
   width: 820px;
@@ -40,10 +81,12 @@ body {
 
 .flex-child {
   flex: 1;
+  position: relative;
 }
 
 .flex-child:first-child {
   margin-right: 30px;
+  position: relative;
 }
 
 h1 {
@@ -59,7 +102,7 @@ h3 {
 }
 
 h4 {
-  margin: 0;
+  margin: 4px 0 0 2px;
   text-transform: uppercase;
 }
 
@@ -67,6 +110,7 @@ h4 {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: var(--box-shadow);
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -101,8 +145,11 @@ label {
 }
 
 input[type='text'],
-input[type='number'] {
+input[type='number'],
+input[type='password'],
+input[type='email'] {
   box-shadow: var(--box-shadow);
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   border: 0;
   border-radius: 10px;
   display: block;
@@ -116,6 +163,7 @@ input[type='number'] {
   cursor: pointer;
   background-color: #00aced;
   box-shadow: var(--box-shadow);
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   color: #fff;
   border: 0;
   border-radius: 10px;
@@ -127,8 +175,20 @@ input[type='number'] {
 }
 
 .btn:focus,
+.btn-login,
+.btn-register-hint,
 .delete-btn:focus {
   outline: 0;
+}
+
+.btn-login {
+  background-color: #fff;
+  color: #00aced;
+}
+
+.btn-register-hint {
+  margin: 0 auto;
+  width: 340px;
 }
 
 .list {
@@ -140,6 +200,7 @@ input[type='number'] {
 .list li {
   background-color: #fff;
   box-shadow: var(--box-shadow);
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   color: #333;
   border-radius: 10px;
   display: flex;
