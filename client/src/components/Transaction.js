@@ -9,13 +9,14 @@ export const Transaction = ({ transaction }) => {
 
   return (
     <li className={transaction.amount < 0 ? 'minus' : 'plus'}>
-      {transaction.text}{' '}
+      {transaction.createdAt.slice(0, 10).split('-').join('/')}
+      <span>{transaction.text} </span>
       <span>
         {sign}${numberWithComma(Math.abs(transaction.amount).toFixed(2))}
       </span>
       <button
         className="delete-btn"
-        onClick={() => deleteTransaction(transaction.id)}
+        onClick={() => deleteTransaction(transaction._id)}
       >
         <i className="fas fa-times"></i>
       </button>
