@@ -13,7 +13,6 @@ import {
 
 export const GraphView = () => {
   const { transactions = [], getTransactions } = useContext(GlobalContext);
-  console.log(transactions);
   const [show, toggleModal] = useState(false);
 
   useEffect(() => {
@@ -39,7 +38,7 @@ export const GraphView = () => {
       <Modal show={show} handleClose={() => toggleModal(false)}>
         <ResponsiveContainer width="100%" height={450}>
           <BarChart
-            width="90%"
+            width={90}
             height={300}
             data={dataArr}
             margin={{
