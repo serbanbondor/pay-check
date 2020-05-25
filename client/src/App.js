@@ -18,8 +18,8 @@ function App() {
         <div className="flex-child infos">
           <Balance />
           <IncomeExpenses />
-          <AddTransaction />
           <GraphView />
+          <AddTransaction />
         </div>
         <div className="flex-child history">
           <TransactionList />
